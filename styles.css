@@ -1,0 +1,151 @@
+body {
+      background-color: #000000;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      overflow-y: auto;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+
+    .archived {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: linear-gradient(45deg, #1a1a1a, #000000, #1a1a1a);
+      background-size: 400% 400%;
+      animation: archivedAnimation 10s infinite;
+      z-index: -1;
+    }
+
+    @keyframes archivedAnimation {
+      0% {
+        background-position: 0% 0%;
+      }
+      100% {
+        background-position: 400% 400%;
+      }
+    }
+
+    .glass-box {
+      margin-top: 20px;
+      width: 300px;
+      padding: 20px;
+      background: rgba(0, 0, 0, 0.8);
+      border: 2px solid rgba(255, 255, 255, 0.2);
+      border-radius: 15px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+      backdrop-filter: blur(10px);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      color: #ffffff;
+      z-index: 2;
+    }
+
+    .profile-pic {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 10px;
+      border: 2px solid #ffffff;
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+      transition: box-shadow 0.3s ease-in-out;
+    }
+
+    .profile-pic:hover {
+      box-shadow: 0 0 25px rgba(255, 255, 255, 1);
+    }
+
+    .content {
+      position: relative;
+      padding: 20px;
+      overflow: hidden;
+      text-align: left;
+      animation: contentFadeIn 3s ease-in-out;
+    }
+
+    @keyframes contentFadeIn {
+      0% {
+        transform: translateY(0%);
+        opacity: 0;
+      }
+      50% {
+        transform: translateY(0%);
+        opacity: 0.5;
+      }
+      100% {
+        transform: translateY(0%);
+        opacity: 1;
+      }
+    }
+
+    h2 {
+      font-size: 24px;
+      margin-bottom: 5px;
+    }
+
+    p {
+      font-size: 13px;
+      line-height: 1.5;
+      margin-bottom: 10px;
+    }
+
+    .center-align {
+      text-align: center;
+    }
+
+    .background-text {
+      position: fixed;
+      bottom: 50px;
+      width: 100%;
+      background-color: #000000;
+      padding: 10px 0;
+      text-align: center;
+      font-size: 12px;
+      color: #888;
+      z-index: 0;
+      pointer-events: none; /* Disable pointer events to make sure it's not interactive */
+    }
+
+    .background-text a {
+      color: #fff;
+      text-decoration: none;
+      transition: color 0.3s ease-in-out;
+      padding: 0 10px;
+      pointer-events: auto; /* Re-enable pointer events for links */
+    }
+
+    .background-text a:hover {
+      color: #ffffff;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 12px;
+      color: #888;
+      width: 100%;
+      padding: 10px 0;
+      z-index: 1;
+      background-color: #000000;
+      position: relative;
+      margin-top: 20px; /* Footer এর উপরে কিছু ফাঁকা স্থান রাখা */
+     
